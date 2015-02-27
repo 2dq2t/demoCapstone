@@ -1,5 +1,6 @@
 <?php
 include ("header.php");
+include ('leftside.php');
 ?>
 <div id="page-wrapper">
 	<div class="container-fluid">
