@@ -69,7 +69,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 
 					<div class="form-group">
 						<label class="col-lg-3 control-label" for="txtProductName">Product
-							Name</label>
+							Name<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
 							<input class="form-control" id="txtProductName"
 								name="txtProductName" type="text" tabindex="1"
@@ -83,7 +83,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 					</div>
 
 					<div class="form-group">
-						<label class="col-lg-3 control-label" for="txtCategory">Category</label>
+						<label class="col-lg-3 control-label" for="txtCategory">Category<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
 							<input class="form-control" id="txtCategory" name="txtCategory"
 								type="text" tabindex="2" placeholder="Enter category">
@@ -97,7 +97,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 					</div>
 
 					<div class="form-group">
-						<label class="col-lg-3 control-label" for="txtPrice">Price</label>
+						<label class="col-lg-3 control-label" for="txtPrice">Price<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
 							<input class="form-control" id="txtPrice" name="txtPrice"
 								type="text" tabindex="3" placeholder="Enter price">
@@ -110,7 +110,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 					</div>
 
 					<div class="form-group">
-						<label class="col-lg-3 control-label" for="txtStatus">Status</label>
+						<label class="col-lg-3 control-label" for="txtStatus">Status<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
 							<input class="form-control" id="txtStatus" name="txtStatus"
 								type="text" tabindex="4" placeholder="Enter Status">

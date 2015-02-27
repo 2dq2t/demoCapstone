@@ -27,7 +27,9 @@ body {
     padding: 0;
     background-color: #fff;
 }
-
+#required{
+    color:red;
+}
 .huge {
     font-size: 50px;
     line-height: normal;
