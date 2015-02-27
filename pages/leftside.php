@@ -6,7 +6,7 @@
 							class="fa fa-fw fa-truck"></i> Sale<i class="fa fa-fw fa-caret-down"></i></a>
 							<ul id="supplier" class="collapse">
 							<li><a href="saleInfo.php"><i class="fa fa-fw fa-truck"></i>Sale Info</a></li>
-							<li><a href="addProductToSale.php"><i class="fa fa-fw fa-edit"></i>Add Product to Sale</a></li>
+							<li><a href="addProductToSales.php"><i class="fa fa-fw fa-edit"></i>Add Product to Sale</a></li>
 							</ul>
 							</li>
 							<li><a href="javascript:;" data-toggle="collapse" data-target="#supplier"><i
