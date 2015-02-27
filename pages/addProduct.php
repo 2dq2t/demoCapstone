@@ -65,13 +65,13 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 		<?php if (!empty($messages)) echo $messages; ?>
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
-				<form class="form-horizontal" method="POST">
+				<form id="formID" class="form-horizontal" method="POST">
 
 					<div class="form-group">
 						<label class="col-lg-3 control-label" for="txtProductName">Product
 							Name<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
-							<input class="form-control" id="txtProductName"
+							<input class="form-control validate[required]" id="txtProductName"
 								name="txtProductName" type="text" tabindex="1"
 								placeholder="Enter product name" />
 						</div>
@@ -85,7 +85,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label class="col-lg-3 control-label" for="txtCategory">Category<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
-							<input class="form-control" id="txtCategory" name="txtCategory"
+							<input class="form-control validate[required]" id="txtCategory" name="txtCategory"
 								type="text" tabindex="2" placeholder="Enter category">
 						</div>
 						 <?php
@@ -99,7 +99,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label class="col-lg-3 control-label" for="txtPrice">Price<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
-							<input class="form-control" id="txtPrice" name="txtPrice"
+							<input class="form-control validate[required] custom[number] min[0]" id="txtPrice" name="txtPrice"
 								type="text" tabindex="3" placeholder="Enter price">
 						</div>
 						 <?php
@@ -112,7 +112,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 					<div class="form-group">
 						<label class="col-lg-3 control-label" for="txtStatus">Status<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
-							<input class="form-control" id="txtStatus" name="txtStatus"
+							<input class="form-control validate[required] custom[integer] min[0]" id="txtStatus" name="txtStatus"
 								type="text" tabindex="4" placeholder="Enter Status">
 						</div>
 						 <?php
@@ -133,6 +133,12 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 	<!-- /#container-fluid -->
 </div>
 <!-- /#page-wrapper -->
+<script type = "text/javascript">
+		jQuery(document).ready(function(){
+			// binds form submission and fields to the validation engine
+			jQuery("#formID").validationEngine();
+		});
+</script>		
 <?php 
 include ('footer.php');
 ?>

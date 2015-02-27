@@ -15,9 +15,20 @@
 <!-- Custom Fonts -->
 <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet"
 	type="text/css">
+	
+<!-- JTable CSS -->
+<link href="../jtable/jtable/themes/lightcolor/gray/jtable.min.css" rel="stylesheet" type="text/css">
+ <link href="../jquery-ui-1.11.3.custom/jquery-ui.min.css" rel="stylesheet" type="text/css" /> 
+ 
+ <!-- Import CSS file for validation engine (in Head section of HTML) -->
+ <link href="../validateEngine/validationEngine.jquery.css" rel="stylesheet" type="text/css" /> 
 
 <script src="../js/jquery.js"></script>
+<script src="../jquery-ui-1.11.3.custom/jquery-ui.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script src="../validateEngine/jquery.validationEngine.js"  type="text/javascript" charset="utf-8"></script>
+<script src="../validateEngine/jquery.validationEngine-vi.js"  type="text/javascript" charset="utf-8"></script>
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
