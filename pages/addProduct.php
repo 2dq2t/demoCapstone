@@ -42,12 +42,12 @@ include '../includes/functions.php';
 				confirm_query($result, $query);
 				
 				if(mysqli_affected_rows($dbc) == 1) {
-					$messages = "<p class='alert alert-success'>The page was added successful.</p>";
+					$messages = "<p class='alert alert-success text-center'>The page was added successful.</p>";
 				} else {
-					$messages = "<p class='alert alert-warning'>The page could not added due to a system error.</p>";
+					$messages = "<p class='alert alert-warning text-center'>The page could not added due to a system error.</p>";
 				}
 			} else {
-				$messages = "<p class='alert alert-warning'>Please fill in all the required fields.</p>";
+				$messages = "<p class='alert alert-warning text-center'>Please fill in all the required fields.</p>";
 			}
 			
 		} // End main IF
@@ -69,7 +69,7 @@ include '../includes/functions.php';
 				<form class="form-horizontal" method="POST">
 						<?php
 							if (isset($errors) && in_array('productname', $errors)){
-								echo "<p class='alert alert-warning'>Please fill in the product name</p>";
+								echo "<p class='alert alert-warning text-center'>Please fill in the product name</p>";
 							}
 						?>
 					<div class="form-group">
@@ -80,7 +80,7 @@ include '../includes/functions.php';
 					</div>
 					<?php
 							if (isset($errors) && in_array('category', $errors)){
-								echo "<p class='alert alert-warning'>Please fill in the category</p>";
+								echo "<p class='alert alert-warning text-center'>Please fill in the category</p>";
 							}
 						?>
 					<div class="form-group">
@@ -91,7 +91,7 @@ include '../includes/functions.php';
 					</div>
 					<?php
 							if (isset($errors) && in_array('price', $errors)){
-								echo "<p class='alert alert-warning'>Please fill in the price</p>";
+								echo "<p class='alert alert-warning text-center'>Please fill in the price</p>";
 							}
 						?>
 					<div class="form-group">
@@ -102,7 +102,7 @@ include '../includes/functions.php';
 					</div>
 					<?php
 							if (isset($errors) && in_array('status', $errors)){
-								echo "<p class='alert alert-warning'>Please fill in the status</p>";
+								echo "<p class='alert alert-warning text-center'>Please fill in the status</p>";
 							}
 						?>
 					<div class="form-group">
