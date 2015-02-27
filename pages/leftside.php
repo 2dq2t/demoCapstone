@@ -2,9 +2,9 @@
 				<ul class="nav navbar-nav side-nav">
 					<li ><a href="#"><i
 							class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
-							<li><a href="javascript:;" data-toggle="collapse" data-target="#supplier"><i
+							<li><a href="javascript:;" data-toggle="collapse" data-target="#sale"><i
 							class="fa fa-fw fa-truck"></i> Sale<i class="fa fa-fw fa-caret-down"></i></a>
-							<ul id="supplier" class="collapse">
+							<ul id="sale" class="collapse">
 							<li><a href="saleInfo.php"><i class="fa fa-fw fa-truck"></i>Sale Info</a></li>
 							<li><a href="addProductToSales.php"><i class="fa fa-fw fa-edit"></i>Add Product to Sale</a></li>
 							</ul>
