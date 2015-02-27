@@ -7,18 +7,16 @@ include ('leftside.php');
 		<!-- Page Heading -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="page-header text-center" >Introduction</h2>
+				<h2 class="page-header">Statistic by Line Chart</h2>
 				<ol class="breadcrumb">
-
+					<li><i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a></li>
+					<li class="active"><i class="fa fa-edit"></i> Line Chart</li>
 				</ol>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="text-center">
-					<h1 class="text-center">Welcome to introduction</h1>
-					<p>bla bla bla....</p>
-				</div>
+			<div class="col-lg-10 col-lg-offset-1">
+				
 			</div>
 		</div>
 	</div>

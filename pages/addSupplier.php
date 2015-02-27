@@ -9,7 +9,7 @@ include ('leftside.php');
 			<div class="col-lg-12">
 				<h2 class="page-header">Add Supplier</h2>
 				<ol class="breadcrumb">
-					<li><i class="fa fa-dashboard"></i> <a href="#">Dashboard</a></li>
+					<li><i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a></li>
 					<li class="active"><i class="fa fa-edit"></i> Add Supplier</li>
 				</ol>
 			</div>
@@ -52,7 +52,6 @@ include ('leftside.php');
 	<!-- /#container-fluid -->
 </div>
 <!-- /#page-wrapper -->
-</div>
-<!-- /#wrapper -->
-</body>
-</html>
+<?php 
+include ('footer.php');
+?>
