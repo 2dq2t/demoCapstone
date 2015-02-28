@@ -2,21 +2,22 @@
 include ("header.php");
 include ('leftside.php');
 ?>
+
 <div id="page-wrapper">
 	<div class="container-fluid">
 		<!-- Page Heading -->
 		<div class="row">
 			<div class="col-lg-12">
-				<h2 class="page-header">Product Info</h2>
+				<h2 class="page-header">Suppliers Info</h2>
 				<ol class="breadcrumb">
 					<li><i class="fa fa-dashboard"></i> <a href="index.php">Dashboard</a></li>
-					<li class="active"><i class="fa fa-edit"></i>Product Info</li>
+					<li class="active"><i class="fa fa-edit"></i>Suppliers Info</li>
 				</ol>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-12">
-				<div id="ProductTableContainer" style="width: 100%;"></div>
+				<div id="SupplierTableContainer" style="width: 100%;"></div>
 			</div>
 		</div>
 	</div>
@@ -30,44 +31,44 @@ include ('leftside.php');
 		$(document).ready(function () {
 
 		    //Prepare jTable
-			$('#ProductTableContainer').jtable({
-				title: 'Product Info',
+			$('#SupplierTableContainer').jtable({
+				title: 'Suppliers Info',
 				paging: true,
 				sorting: true,
-				defaultSorting: 'product_name DESC',
+				defaultSorting: 'supplier_name DESC',
 				actions: {
-					listAction: 'productInfoActions.php?action=list',
-					createAction: 'productInfoActions.php?action=create',
-					updateAction: 'productInfoActions.php?action=update',
-					deleteAction: 'productInfoActions.php?action=delete'
+					listAction: 'suppliersInfoAction.php?action=list',
+					createAction: 'suppliersInfoAction.php?action=create',
+					updateAction: 'suppliersInfoAction.php?action=update',
+					deleteAction: 'suppliersInfoAction.php?action=delete'
 				},
 				fields: {
-					product_id:{
+					supplier_id:{
 							key: true,
 							edit:false,
 							list:false,
 							title:'Index',
 							width:'10%'
 						},
-					product_name: {
-						title:'Product Name',
+					supplier_name: {
+						title:'Supplier Name',
 						width:'30%',
 						inputClass: 'validate[required]'
 					},
-					category: {
-						title: 'Category',
+					email: {
+						title: 'Email',
 						width: '30%',
 						inputClass: 'validate[required]'
 					},
-					price: {
-						title: 'Price',
+					phone: {
+						title: 'Phone',
 						width: '15%',
-						inputClass: 'validate[required] custom[number] min[0]'
+						inputClass: 'validate[required] custom[number] minSize[10] maxSize[11]'
 					},
-					status: {
-						title: 'Status',
+					region: {
+						title: 'Region',
 						width: '15%',
-						inputClass: 'validate[required]custom[integer] min[0]'
+						inputClass: 'validate[required]'
 					}
 				},
 				formCreated: function (event, data) {
@@ -85,7 +86,7 @@ include ('leftside.php');
 			});
 
 			//Load person list from server
-			$('#ProductTableContainer').jtable('load');
+			$('#SupplierTableContainer').jtable('load');
 
 		});
 

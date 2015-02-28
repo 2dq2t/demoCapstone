@@ -28,7 +28,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 		$errors [] = 'price';
 	}
 	
-	if (! empty ( $_POST ['txtStatus'] )) {
+	if (isset ( $_POST ['txtStatus']) && filter_var($_POST['txtStatus'], FILTER_VALIDATE_INT) ) {
 		$status = mysqli_real_escape_string ( $dbc, strip_tags ( $_POST ['txtStatus'] ) );
 	} else {
 		$errors [] = 'status';
@@ -43,6 +43,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 		
 		if (mysqli_affected_rows ( $dbc ) == 1) {
 			$messages = "<p class='alert alert-success text-center'>The page was added successful.</p>";
+			$_POST = array();
 		} else {
 			$messages = "<p class='alert  alert-danger text-center'>The page could not added due to a system error.</p>";
 		}
@@ -73,7 +74,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 						<div class="col-lg-5">
 							<input class="form-control validate[required]" id="txtProductName"
 								name="txtProductName" type="text" tabindex="1"
-								placeholder="Enter product name" />
+								placeholder="Enter product name" value="<?php if (isset($_POST['txtProductName'])) echo strip_tags($_POST['txtProductName']) ;?>" />
 						</div>
 						 <?php
 							if (isset ( $errors ) && in_array ( 'productname', $errors )) {
@@ -86,7 +87,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 						<label class="col-lg-3 control-label" for="txtCategory">Category<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
 							<input class="form-control validate[required]" id="txtCategory" name="txtCategory"
-								type="text" tabindex="2" placeholder="Enter category">
+								type="text" tabindex="2" placeholder="Enter category" value="<?php if (isset($_POST['txtCategory'])) echo strip_tags($_POST['txtCategory']) ;?>">
 						</div>
 						 <?php
 							if (isset ( $errors ) && in_array ( 'category', $errors )) {
@@ -100,7 +101,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 						<label class="col-lg-3 control-label" for="txtPrice">Price<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
 							<input class="form-control validate[required] custom[number] min[0]" id="txtPrice" name="txtPrice"
-								type="text" tabindex="3" placeholder="Enter price">
+								type="text" tabindex="3" placeholder="Enter price" value="<?php if (isset($_POST['txtPrice'])) echo strip_tags($_POST['txtPrice']) ;?>">
 						</div>
 						 <?php
 							if (isset ( $errors ) && in_array ( 'price', $errors )) {
@@ -113,7 +114,7 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 						<label class="col-lg-3 control-label" for="txtStatus">Status<span id="required">&nbsp;*</span></label>
 						<div class="col-lg-5">
 							<input class="form-control validate[required] custom[integer] min[0]" id="txtStatus" name="txtStatus"
-								type="text" tabindex="4" placeholder="Enter Status">
+								type="text" tabindex="4" placeholder="Enter Status" value="<?php if (isset($_POST['txtStatus'])) echo strip_tags($_POST['txtStatus']) ;?>">
 						</div>
 						 <?php
 							if (isset ( $errors ) && in_array ( 'status', $errors )) {

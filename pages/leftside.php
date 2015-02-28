@@ -13,7 +13,7 @@
 			data-target="#supplier"><i class="fa fa-fw fa-table"></i> Supplier<i
 				class="fa fa-fw fa-caret-down"></i></a>
 			<ul id="supplier" class="collapse">
-				<li><a href="supplierInfo.php"><i class="fa fa-fw fa-table"></i>Supplier
+				<li><a href="suppliersInfo.php"><i class="fa fa-fw fa-table"></i>Supplier
 						Info</a></li>
 				<li><a href="addSupplier.php"><i class="fa fa-fw fa-edit"></i>Add
 						Supplier</a></li>
