@@ -34,10 +34,9 @@ include ('leftside.php');
 				title: 'Product Info',
 				paging: true,
 				sorting: true,
-				defaultSorting: 'product_name DESC',
+				defaultSorting: 'product_name ASC',
 				actions: {
 					listAction: 'productInfoActions.php?action=list',
-					createAction: 'productInfoActions.php?action=create',
 					updateAction: 'productInfoActions.php?action=update',
 					deleteAction: 'productInfoActions.php?action=delete'
 				},
