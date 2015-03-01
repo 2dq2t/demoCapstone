@@ -7,7 +7,7 @@ try
 	if($_GET["action"] == "list")
 	{
 		//Get records from database
-		$q = "SELECT * FROM supplier ORDER BY " . $_GET["jtSorting"] . " LIMIT " . $_GET["jtStartIndex"] . "," . $_GET["jtPageSize"] . "";
+		$q = "SELECT * FROM suppliers ORDER BY " . $_GET["jtSorting"] . " LIMIT " . $_GET["jtStartIndex"] . "," . $_GET["jtPageSize"] . "";
 		$result = mysqli_query($dbc,$q) or die ("Query error!".mysqli_error($dbc));
 
 		//Add all records to an array
@@ -27,11 +27,11 @@ try
 	else if($_GET["action"] == "create")
 	{
 		//Insert record into database
-		$q = "INSERT INTO supplier(supplier_name, email,phone, region) VALUES('" . $_POST["supplier_name"] . "', '" . $_POST["email"]. "', " . $_POST["phone"] . ",'".$_POST["region"]."')";
+		$q = "INSERT INTO suppliers(supplier_name, email,phone, region) VALUES('" . $_POST["supplier_name"] . "', '" . $_POST["email"]. "', " . $_POST["phone"] . ",'".$_POST["region"]."')";
 		$result = mysqli_query($dbc,$q);
 		
 		//Get last inserted record (to return to jTable)
-		$q = "SELECT * FROM supplier WHERE supplier_id = LAST_INSERT_ID()";
+		$q = "SELECT * FROM suppliers WHERE supplier_id = LAST_INSERT_ID()";
 		$result = mysqli_query($dbc,$q);
 		$row = mysqli_fetch_array($result);
 
@@ -45,7 +45,7 @@ try
 	else if($_GET["action"] == "update")
 	{
 		//Update record in database
-		$q = "UPDATE supplier SET supplier_name = '" . $_POST["supplier_name"] . "', email = '" . $_POST["supplier_name"]. "', phone = " . $_POST["phone"] . ", region = " . $_POST["region"] . " WHERE supplier_id = " . $_POST["supplier_id"] . "";
+		$q = "UPDATE suppliers SET supplier_name = '" . $_POST["supplier_name"] . "', email = '" . $_POST["supplier_name"]. "', phone = " . $_POST["phone"] . ", region = " . $_POST["region"] . " WHERE supplier_id = " . $_POST["supplier_id"] . "";
 		$result = mysqli_query($dbc,$q);
 
 		//Return result to jTable
@@ -57,7 +57,7 @@ try
 	else if($_GET["action"] == "delete")
 	{
 		//Delete from database
-		$q = "DELETE FROM supplier WHERE supplier_id = " . $_POST["supplier_id"];
+		$q = "DELETE FROM suppliers WHERE supplier_id = " . $_POST["supplier_id"];
 		$result = mysqli_query($dbc,$q);
 
 		//Return result to jTable

@@ -42,10 +42,10 @@ if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 		confirm_query ( $result, $query );
 		
 		if (mysqli_affected_rows ( $dbc ) == 1) {
-			$messages = "<p class='alert alert-success text-center'>The page was added successful.</p>";
+			$messages = "<p class='alert alert-success text-center'>The product was added successful.</p>";
 			$_POST = array();
 		} else {
-			$messages = "<p class='alert  alert-danger text-center'>The page could not added due to a system error.</p>";
+			$messages = "<p class='alert  alert-danger text-center'>The product could not added due to a system error.</p>";
 		}
 	} else {
 		$messages = "<p class='alert alert-danger text-center'>Please fill in all the required fields.</p>";

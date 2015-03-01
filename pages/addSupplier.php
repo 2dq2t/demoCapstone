@@ -36,15 +36,15 @@ include '../includes/functions.php';
 		 	
 		 	if (empty($errors)) {
 		 		// Neu khong co loi xay ra, bat dau chen du lieu vao CSDL
-		 		$query = "INSERT INTO supplier (supplier_name, email, phone, region) 
+		 		$query = "INSERT INTO suppliers (supplier_name, email, phone, region) 
 		 				VALUES ('{$supplier_name}', '{$email}', $phone_number, '{$region}')";
 		 		$result = mysqli_query($dbc, $query);
 		 		
 		 		if (mysqli_affected_rows($dbc) == 1) {
-		 			$messages = "<p class='alert alert-success text-center'>The page was added successful.</p>";
+		 			$messages = "<p class='alert alert-success text-center'>The supplier was added successful.</p>";
 		 			$_POST = array();
 		 		} else {
-		 			$messages = "<p class='alert  alert-danger text-center'>The page could not added due to a system error.</p>";
+		 			$messages = "<p class='alert  alert-danger text-center'>The supplier could not added due to a system error.</p>";
 		 		}
 		 	} else {
 		 		$messages = "<p class='alert alert-danger text-center'>Please fill in all the required fields.</p>";
