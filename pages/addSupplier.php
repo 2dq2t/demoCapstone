@@ -65,7 +65,7 @@ include '../includes/functions.php';
 		</div>
 		<?php if (!empty($messages)) echo $messages; ?>
 		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2">
+			<div class="col-lg-10 col-lg-offset-1">
 				<form class="form-horizontal" action="" method="post">
 					<div class="form-group">
 						<label class="col-lg-3 control-label" for="txtSupplierName">Supplier Name</label>
