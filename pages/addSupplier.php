@@ -122,6 +122,6 @@ include '../includes/functions.php';
 	<!-- /#container-fluid -->
 </div>
 <!-- /#page-wrapper -->
-<?php 
+<?php
 include ('footer.php');
 ?>

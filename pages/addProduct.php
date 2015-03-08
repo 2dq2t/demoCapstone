@@ -6,6 +6,7 @@ include '../includes/functions.php';
 ?>
 <div id="page-wrapper">
 <?php
+
 if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
 	// Neu gia tri ton tai, bat dau su ly form
 	$errors = array ();
